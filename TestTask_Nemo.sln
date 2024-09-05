@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33829.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTask_Nemo", "TestTask_Nemo.csproj", "{2BC94541-FB02-4C13-9AA2-0CAC18099363}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2BC94541-FB02-4C13-9AA2-0CAC18099363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BC94541-FB02-4C13-9AA2-0CAC18099363}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BC94541-FB02-4C13-9AA2-0CAC18099363}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BC94541-FB02-4C13-9AA2-0CAC18099363}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EEE5B3F4-3356-48CA-9800-50A220781FC2}
+	EndGlobalSection
+EndGlobal

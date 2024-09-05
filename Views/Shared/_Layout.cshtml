@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TestTask_Nemo</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TestTask_Nemo.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <h1 class="toast-header">
+                Wallet
+        </h1>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+
+            <div class="me-3">
+                @RenderBody()
+
+                <div class="me-3">
+                    <form method="post" asp-controller="Wallet" asp-action="Convert">
+                        <label for="select-1" class="form-label ">Конвертировать в другую валюту: </label>
+                        <div class="d-inline-block me-3">
+                            <select class="form-select" id="select-1" name="numCode" asp-items="@ViewBag.CurrenciesList"> </select>
+                        </div>
+                        <div class="d-inline-block">
+                            <button type="submit" class="btn-primary " id="Convert" name="Convert">Конвертировать</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="me-3">
+                    <form method="post" asp-controller="Wallet" asp-action="Add">
+                        <div class="d-inline-block me-3">
+                            <input type="number" name="amount" min="0" step="0.01" value="100" />
+                        </div>
+                        <div class="d-inline-block me-3">
+                        <label for="select-2" class="form-label"></label>
+                            <select class="form-select d-inline-block me-3" id="select-2" name="numCode" asp-items="@ViewBag.CurrenciesList"> </select>
+                        </div>
+                        <div class="d-inline-block me-3">
+                            <button type="submit" class="btn-primary d-inline-block me-3" id="Add" name="Add">Положить на счёт </button>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="me-3">
+                    <form method="post" asp-controller="Wallet" asp-action="Withdraw">
+                        <div class="d-inline-block me-3">
+                            <input type="number" name="amount" min="0" step="0.01" value="100" />
+                        </div>
+                        <div class="d-inline-block me-3">
+                            <label for="select-3" class="form-label"></label>
+                            <select class="form-select d-inline-block me-3" id="select-3" name="numCode" asp-items="@ViewBag.CurrenciesList"> </select>
+                        </div>
+                        <div class="d-inline-block me-3">
+                            <button type="submit" class="btn-primary d-inline-block me-3" id="Withdraw" name="Withdraw">Снять со счёта</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
